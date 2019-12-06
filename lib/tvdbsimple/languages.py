@@ -41,7 +41,7 @@ class Languages(TVDB):
 
         """
         if self._ALL_PARSED:
-            return list(self.LANGUAGES.values())
+            return self.LANGUAGES.values()
             
         path = self._get_path('all')
         
