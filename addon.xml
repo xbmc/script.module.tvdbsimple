@@ -6,8 +6,8 @@
     </requires>
     <extension point="xbmc.python.module" library="lib" />
     <extension point="xbmc.addon.metadata">
-        <summary lang="en">tvdbsimple module</summary>
-        <description lang="en">Helper module for thetvdb site access</description>
+        <summary lang="en_GB">tvdbsimple module</summary>
+        <description lang="en_GB">Helper module for thetvdb site access</description>
         <platform>all</platform>
         <license>GPLv3</license>
         <source>https://github.com/phate89/tvdbsimple</source>
