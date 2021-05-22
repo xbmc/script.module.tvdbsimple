@@ -19,13 +19,14 @@ class Search(TVDB):
         'series_params': '/series/params'
     }
 
-    def series(self, name='', imdbId='', zap2itId='', language=''):
+    def series(self, name='', imdbId='', zap2itId='', slug='', language=''):
         """
         Search series with the information provided.
 
         You can set `name` to search for a series with that name. You can set `imdbId` 
         to search a series with the provided imdb id. You can set `zap2itId` 
-        to search a series with the provided zap2it id. You can set `language` to 
+        to search a series with the provided zap2it id. You can set `slug`
+        to search a series with the provided slug. You can set `language` to
         retrieve the results with the provided language.
 
         Returns a list series with basic information that matches your search.
@@ -50,6 +51,8 @@ class Search(TVDB):
             filters['imdbId'] = imdbId
         if zap2itId:
             filters['zap2itId'] = zap2itId
+        if slug:
+            filters['slug'] = slug
 
         self._set_language(language)
         response = self._GET(path, params=filters)
